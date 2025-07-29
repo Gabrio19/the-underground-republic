@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+    margin: 0;
+    background: transparent;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#audio-toggle {
+    font-size: 26px;
+    background: none;
+    color: #d2b48c;
+    border: 2px solid #bfa177;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#audio-toggle:hover {
+    background-color: #bfa177;
+    color: #3a2e25;
+}
+</style>
+</head>
+<body>
+
+<audio id="background-audio" autoplay loop muted>
+    <source src="audio/nature sound.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<button id="audio-toggle">🔇</button>
+
+<script>
+const audio = document.getElementById('background-audio');
+const btn = document.getElementById('audio-toggle');
+
+// Volume par défaut
+audio.volume = 0.5;
+
+// Éviter le blocage : démuter seulement après interaction
+btn.addEventListener('click', () => {
+    if (audio.muted) {
+        audio.muted = false;
+        btn.textContent = '🔊';
+    } else {
+        audio.muted = true;
+        btn.textContent = '🔇';
+    }
+});
+</script>
+
+</body>
+</html>

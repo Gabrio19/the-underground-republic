@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            overflow: hidden;
+        }
+
+        .red-ant {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('../images/red-ant-icon.png') no-repeat center/contain;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 99999;
+            animation: float linear infinite, fade 15s ease-in-out infinite;
+        }
+
+        @keyframes fade {
+            0%, 100% { opacity: 0; }
+            10%, 90% { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%   { transform: translate(0, 0); }
+            20%  { transform: translate(var(--x1), var(--y1)); }
+            40%  { transform: translate(var(--x2), var(--y2)); }
+            60%  { transform: translate(var(--x3), var(--y3)); }
+            80%  { transform: translate(var(--x4), var(--y4)); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
+</head>
+<body>
+
+<script>
+const nbAnts = Math.floor(Math.random() * 6) + 10; // entre 10 et 15 fourmis rouges
+
+for (let i = 0; i < nbAnts; i++) {
+    const ant = document.createElement('div');
+    ant.classList.add('red-ant');
+
+    ant.style.top = Math.random() * 100 + 'vh';
+    ant.style.left = Math.random() * 100 + 'vw';
+
+    // random keyframe positions : x/y entre -50vw/vh et +50vw/vh (aléatoire dans toutes directions)
+    for (let k = 1; k <= 4; k++) {
+        ant.style.setProperty(`--x${k}`, `${Math.floor(Math.random() * 100 - 50)}vw`);
+        ant.style.setProperty(`--y${k}`, `${Math.floor(Math.random() * 100 - 50)}vh`);
+    }
+
+    // durée random entre 60 et 120 secondes
+    const duration = 60 + Math.random() * 60;
+    ant.style.animationDuration = `${duration}s, 15s`;
+
+    document.body.appendChild(ant);
+}
+</script>
+
+</body>
+</html>

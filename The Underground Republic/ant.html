@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { margin:0; background:transparent; overflow:hidden; }
+
+        .ant {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('images/ant-icon.png') no-repeat center/contain;
+            pointer-events: none;
+            opacity: 0;
+            animation: float linear infinite, fade 12s ease-in-out infinite;
+            z-index: 99999;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(var(--x1), var(--y1)); }
+            50% { transform: translate(var(--x2), var(--y2)); }
+            75% { transform: translate(var(--x3), var(--y3)); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @keyframes fade {
+            0%, 100% { opacity: 0; }
+            10%, 90% { opacity: 0.9; }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const numberOfAnts = Math.floor(Math.random() * 6) + 10; // between 10 and 15
+        for (let i = 0; i < numberOfAnts; i++) {
+            const ant = document.createElement('div');
+            ant.className = 'ant';
+
+            ant.style.top = Math.random() * 100 + 'vh';
+            ant.style.left = Math.random() * 100 + 'vw';
+
+            const duration = 50 + Math.random() * 50;
+            ant.style.animationDuration = `${duration}s, 12s`;
+
+            // mouvements aléatoires
+            ant.style.setProperty('--x1', `${Math.floor(Math.random() * 100 - 50)}vw`);
+            ant.style.setProperty('--y1', `${Math.floor(Math.random() * 100 - 50)}vh`);
+            ant.style.setProperty('--x2', `${Math.floor(Math.random() * 100 - 50)}vw`);
+            ant.style.setProperty('--y2', `${Math.floor(Math.random() * 100 - 50)}vh`);
+            ant.style.setProperty('--x3', `${Math.floor(Math.random() * 100 - 50)}vw`);
+            ant.style.setProperty('--y3', `${Math.floor(Math.random() * 100 - 50)}vh`);
+
+            document.body.appendChild(ant);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Photo gallery of ant colonies, their structures, and environments - The Underground Republic.">
+    <title>The Underground Republic | Gallery</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+
+    <style>
+        .carousel-item {
+            padding: 30px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 400px; /* Taille uniforme */
+            border-radius: 12px;
+            border: 3px solid #bfa177;
+            background-color: #2e241c;
+            object-fit: cover; /* Remplit toute la zone */
+        }
+        .carousel-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+        .carousel-text h5 {
+            color: #d2b48c;
+            margin-bottom: 15px;
+        }
+        .carousel-text p {
+            font-size: 1.1rem;
+        }
+        /* Repositionnement des boutons */
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+        .carousel-control-prev {
+            left: -60px; /* éloigne du texte */
+        }
+        .carousel-control-next {
+            right: -60px; /* éloigne du texte */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Underground Republic</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Ants</a></li>
+            <li><a href="castes.html">Castes & Roles</a></li>
+            <li><a href="architecture.html">Architecture</a></li>
+            <li><a href="communication.html">Communication</a></li>
+            <li><a href="warfare.html">Warfare</a></li>
+            <li><a href="lessons.html">Lessons from Ants</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about-me.html">About Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- PERSISTENT AUDIO PLAYER -->
+<iframe src="audio-player.html" 
+    style="position:fixed;top:20px;right:20px;width:60px;height:60px;
+           background:transparent;border:none;z-index:9999;"></iframe>
+
+<main class="container my-5">
+    <section>
+        <h2 class="text-center mb-4">Gallery</h2>
+        <p class="text-center">Discover the hidden beauty of ant colonies, their elaborate structures, and the tireless creatures that bring them to life.</p>
+
+        <!-- Bootstrap Carousel with 8-second interval -->
+        <div id="antCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/Antcolony1.png" alt="Ants at nest entrance" class="d-block w-100">
+                        </div>
+                        <div class="col-md-6 carousel-text">
+                            <h5>Guarding the Nest</h5>
+                            <p>Dozens of black ants gather at the entrance of their sandy nest, moving in perfect coordination to protect the colony and transport food inside.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/Antcolony2.png" alt="Red ant close-up" class="d-block w-100">
+                        </div>
+                        <div class="col-md-6 carousel-text">
+                            <h5>Red Sentinel</h5>
+                            <p>A fierce red ant stands tall, its sharp gaze scanning the surroundings — a vigilant guardian ready to defend its territory from intruders.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/Anttunels.png" alt="Ant Tunnels" class="d-block w-100">
+                        </div>
+                        <div class="col-md-6 carousel-text">
+                            <h5>Underground City</h5>
+                            <p>A breathtaking cross-section reveals a labyrinth of tunnels and chambers, perfectly engineered for ventilation, food storage, and nurseries.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/Antsoldiers.png" alt="Black ant close-up" class="d-block w-100">
+                        </div>
+                        <div class="col-md-6 carousel-text">
+                            <h5>Mandibles of Power</h5>
+                            <p>A black soldier ant shows off its massive, razor-sharp mandibles — a powerful weapon against any enemy foolish enough to approach.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/Antworkers.png" alt="Ants carrying heavy load" class="d-block w-100">
+                        </div>
+                        <div class="col-md-6 carousel-text">
+                            <h5>Strength in Unity</h5>
+                            <p>Working together, ants push and pull a massive object up a slope, proving that teamwork can achieve the impossible.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/Antman.png" alt="Ant Man" class="d-block w-100">
+                        </div>
+                        <div class="col-md-6 carousel-text">
+                            <h5>The Ant Man</h5>
+                            <p>A rare encounter between human imagination and insect reality — Ant Man symbolizes the extraordinary strength, resilience, and unity of ants, inspiring tales that blur the line between science and legend.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/antsqueen.png" alt="Ant Queen" class="d-block w-100">
+                        </div>
+                        <div class="col-md-6 carousel-text">
+                            <h5>Queen of the Colony</h5>
+                            <p>The heart of the ant kingdom, the queen dedicates her life to laying eggs and ensuring the survival of the colony. Her reign can last for decades, making her the true monarch of the underground world.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/Antflower.png" alt="Ant with Flower" class="d-block w-100">
+                        </div>
+                        <div class="col-md-6 carousel-text">
+                            <h5>Nature's Partnership</h5>
+                            <p>An ant delicately interacts with a flower, showcasing the intricate relationships between insects and plants. These tiny creatures play a silent yet vital role in pollination and ecosystem balance.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controls repositioned -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#antCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#antCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#antCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#antCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#antCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#antCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#antCarousel" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#antCarousel" data-bs-slide-to="5"></button>
+                <button type="button" data-bs-target="#antCarousel" data-bs-slide-to="6"></button>
+                <button type="button" data-bs-target="#antCarousel" data-bs-slide-to="7"></button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="text-center mt-5">
+    <p>&copy; 2025 The Underground Republic | Designed by Tahaka Gabrio Albert</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
